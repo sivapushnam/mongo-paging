@@ -1,0 +1,22 @@
+{
+  "name": "mongo-paging",
+  "version": "1.0.0",
+  "description": "Plugin for Mongoose Schema to implement the paginated result of documents and Sub-documents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivapushnam/mongo-paging.git"
+  },
+  "keywords": [
+    "Mongoose"
+  ],
+  "author": "sivapushnam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sivapushnam/mongo-paging/issues"
+  },
+  "homepage": "https://github.com/sivapushnam/mongo-paging#readme"
+}
