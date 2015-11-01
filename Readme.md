@@ -1,6 +1,6 @@
 
 # mongo-paging
-
+Mongo-paging will allows to paginate the mongo document and subdocuments in a collections.
 
 ## Index
 
@@ -52,7 +52,7 @@ var mongoPaging = require('mongo-paging');
 MySchema.plugin(mongoPaging);
 
 MySchema.paginate({
-  page: 2, limit: 10
+ q:{}, page: 2, limit: 10
 }, callback);
 
 ```
@@ -60,36 +60,27 @@ MySchema.paginate({
 ```js
 
 // advanced example usage of `mongo-paging`
-// querying for `{ columns: 'title', { populate: 'some_ref' }, { sortBy : { title : -1 } }` items in `MySchema`
+// querying for `{ columns: 'title', { populate: 'collection_ref' }, { sortBy : { title : -1 } }` items in `MySchema`
 // paginating by second page, 10 items per page (10 results, page 2)
-
-MySchema.paginate({
-   },
+//var options = {
+//        q: {},
+//        page: page,
+//        limit: limit,
+//        populate: [
+//          {
+//            path: 'comments.user',
+//            select: '_id username firstname lastname'
+//          }
+//        ],
+//        columns: 'comments.user',
+//        slice: 'comments',
+//        sortBy: sortView
+//      };
+//      options.q = {_id: groupId};
+MySchema.paginate(
+   options,
   callback
 );
-
-```
-
-```js
-
-// populating more than one ref
-
-MySchema.paginate({
-  
-}, callback);
-
-```
-
-```js
-
-// selecting specific field for population
-
-MySchema.paginate({
-  
-}, callback);
-
-```
-
 
 ## Tests
 
